@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rasmus Vananurm by old webpage changed to fit criteria</title>
+  <script src=" https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+  </script>
+  <style>
+    h1{
+  text-decoration:underline;
+}
+
+table, td{
+  border:solid;
+  border-collapse: collapse;
+  background-color:#ffd340;
+}
+
+body{
+  background-color:#ffc500;
+}
+
+canvas{
+  border:solid;
+  height:500px;
+  background-color:#ffd340;
+  margin-bottom:5px;
+}
+
+input{
+  border-radius:15px;
+  font-size:20px;
+  font-family:Serif;
+  background-color:#ffb600;
+  margin-right:5px;
+  margin-bottom:5px;
+}
+
+#upload{
+  margin-bottom:8px;
+  font-size:18px;
+}
+  </style>  
+</head>
+<body>
+<h1>A webpage for applying filters to your images</h1>
+<b>Tudengikood: 222527</b>
+<br><br>
+The filter part below is a website that I made in 2019, when learning the basics of HTML/CSS/JS in a Coursera course by Duke University. This website has the ability to apply filters to pictures that you upload to the canvas. It appears, when making it, I failed to add a download button, and I'm not going to add it as of now. Therefore you can see, what the filters below would look like on your pictures, but not directly download the pictures with filters applied. You can also add filters to pictures that you have previously manipulated, meaning if you want your picture to be even more blurry, apply the "Blur" filter more than once. If you wish to add filters to the original picture, press "Reset image" before applying new filters.
+<br>
+Some filters might take longer to apply than others. <b>Please be patient!</b>
+<br><br>
+<table>
+  <tr>
+    <td><h2>Filter</h2></td>
+    <td><h2>Before</h2></td>
+    <td><h2>After</h2></td>
+  </tr>
+  <tr>
+    <td><h4>Rainbow</h4></td>
+    <td><a href="https://presskit.porsche.de/">
+      <img src="https://presskit.porsche.de/models/assets/images/d/29R5467-07a1d5cd.jpg" height=400px></td>
+    <td><img src="C:\Users\HP\Downloads\Rainbow_porsche.PNG"></td>
+  </tr>
+</table>
+<br>
+<canvas ID="canvas"></canvas>
+<br>
+<input type="file" ID="upload" onchange="loadImage()" multiple="false" accept="image/*"></input>
+<br>
+<input type="button" value="Grayscale" ID="grayscale" onclick="makeGray()"></input>
+<input type="button" value="Black&White" ID="blackAndWhite" onclick="blackAndWhite()"></input>
+<input type="button" value="Invert" ID="invert" onclick="doInvert()"></input>
+<input type="button" value="Red" ID="red" onclick="redMess()"></input>
+<input type="button" value="Green" ID="green" onclick="greenMess()"></input>
+<input type="button" value="Blue" ID="blue" onclick="blueMess()"></input>
+<input type="button" value="Yellow" ID="yellow" onclick="yellowMess()"></input>
+<input type="button" value="Windows" ID="windows" onclick="makeWindows()"></input>
+<input type="button" value="Rainbow" ID="rainbow" onclick="makeRainbow()"></input>
+<input type="button" value="Blur" ID="blur" onclick="makeBlur()"></input>
+<br>
+<input type="button" value="Reset image" ID="reset" onclick="resetImage()"></input>
+</body>
+</html>
